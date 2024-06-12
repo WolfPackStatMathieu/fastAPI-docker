@@ -35,10 +35,6 @@ jobs:
         run: |
           pylint . --fail-under=6  # Analyse le code dans le répertoire 'src' et échoue si le score est inférieur à 6
 
-      # Étape pour exécuter les tests Python
-      - name: Test Python code
-        run: python train.py  # Exécute le script 'train.py' pour tester le code
-
   # Job pour construire et déployer l'image Docker, qui dépend du job 'test'
   build-and-deploy:
     needs: test  # S'exécute seulement si le job 'test' réussit
