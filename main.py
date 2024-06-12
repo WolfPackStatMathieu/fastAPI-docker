@@ -3,7 +3,9 @@ lance une API minimale
 """
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+    title="une API minimale"
+    ,root_path="/proxy/5000/")
 
 @app.get("/")
 def read_root():
