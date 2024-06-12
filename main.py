@@ -5,7 +5,7 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="une API minimale"
-    ,root_path="/proxy/5000/")
+    ,root_path="/proxy/8000/")
 
 @app.get("/")
 def read_root():
